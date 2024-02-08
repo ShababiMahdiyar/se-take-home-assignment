@@ -73,7 +73,7 @@ function Dashboard() {
           setBots(currentBots => currentBots.map(bot =>
             bot.id === availableBot.id ? { ...bot, status: BotStatus.IDLE, orderId: undefined, timeoutRef: undefined } : bot
           ));
-        }, 3000);
+        }, 10000);
         setBots(currentBots => currentBots.map(bot =>
           bot.id === availableBot.id ? { ...bot, status: BotStatus.PROCESSING, orderId: pendingOrder.id, timeoutRef: timeoutRef } : bot
         ));
