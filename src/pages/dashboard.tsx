@@ -87,7 +87,7 @@ function Dashboard() {
   return (
     <div className='flex flex-col gap-y-3 w-full'>
       <div className='grid grid-cols-2 bg-gray-900 w-full rounded-lg shadow-xl justify-between p-5 gap-x-6'>
-        <div className={`grid grid-cols-${sortedOrders.length && sortedOrders.every((order) => order.status === OrderStatus.COMPLETE) ? "3" : "2"} col-span-1 gap-x-4`}>
+        <div className={`grid ${sortedOrders.length && sortedOrders.every((order) => order.status === OrderStatus.COMPLETE) ? "grid-cols-3" : "grid-cols-2"}  gap-x-4`}>
           <Button onClick={() => {
             addOrder(OrderType.NORMAL)
           }}>
