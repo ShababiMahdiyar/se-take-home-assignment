@@ -6,7 +6,7 @@ import { Button } from '@nextui-org/react';
 import OrderList from '@/components/orderList';
 import BotList from '@/components/botList';
 
-function dashboard() {
+function Dashboard() {
 
   const { sortedOrders, setOrders } = useSortedOrders([]);
   const [bots, setBots] = useState<Bot[]>([]);
@@ -129,4 +129,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default Dashboard
